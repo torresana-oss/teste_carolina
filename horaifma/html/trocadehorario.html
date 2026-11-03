@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Troca de Horários - Hora IFMA</title>
+
+    <link rel="stylesheet" href="css/troca-horarios.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Hora IFMA</h1>
+        <p>Troca de Horários</p>
+    </header>
+
+    <main>
+
+        <section class="titulo">
+            <h2>Solicitar Troca de Horário</h2>
+
+            <p>
+                Preencha os dados abaixo para solicitar uma troca de horário.
+            </p>
+        </section>
+
+        <section class="troca-box">
+
+            <form id="formTroca">
+
+                <div class="campo">
+                    <label for="diaAtual">Dia atual</label>
+
+                    <select id="diaAtual" required>
+                        <option value="">Selecione o dia</option>
+                        <option value="Segunda-feira">Segunda-feira</option>
+                        <option value="Terça-feira">Terça-feira</option>
+                        <option value="Quarta-feira">Quarta-feira</option>
+                        <option value="Quinta-feira">Quinta-feira</option>
+                        <option value="Sexta-feira">Sexta-feira</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="horarioAtual">Horário atual</label>
+
+                    <select id="horarioAtual" required>
+                        <option value="">Selecione o horário</option>
+
+                        <option value="7:10 - 8:00">7:10 - 8:00</option>
+                        <option value="8:00 - 8:50">8:00 - 8:50</option>
+                        <option value="8:50 - 9:40">8:50 - 9:40</option>
+                        <option value="10:00 - 10:50">10:00 - 10:50</option>
+                        <option value="10:50 - 11:40">10:50 - 11:40</option>
+                        <option value="11:40 - 12:30">11:40 - 12:30</option>
+                        <option value="13:10 - 14:00">13:10 - 14:00</option>
+                        <option value="14:00 - 14:50">14:00 - 14:50</option>
+                        <option value="14:50 - 15:40">14:50 - 15:40</option>
+                        <option value="16:00 - 16:50">16:00 - 16:50</option>
+                        <option value="16:50 - 17:40">16:50 - 17:40</option>
+                        <option value="17:40 - 18:30">17:40 - 18:30</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="disciplina">Disciplina</label>
+
+                    <input
+                        type="text"
+                        id="disciplina"
+                        placeholder="Digite a disciplina"
+                        required
+                    >
+                </div>
+
+                <hr>
+
+                <h3>Novo horário</h3>
+
+                <div class="campo">
+                    <label for="novoDia">Novo dia</label>
+
+                    <select id="novoDia" required>
+                        <option value="">Selecione o novo dia</option>
+                        <option value="Segunda-feira">Segunda-feira</option>
+                        <option value="Terça-feira">Terça-feira</option>
+                        <option value="Quarta-feira">Quarta-feira</option>
+                        <option value="Quinta-feira">Quinta-feira</option>
+                        <option value="Sexta-feira">Sexta-feira</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="novoHorario">Novo horário</label>
+
+                    <select id="novoHorario" required>
+                        <option value="">Selecione o novo horário</option>
+
+                        <option value="7:10 - 8:00">7:10 - 8:00</option>
+                        <option value="8:00 - 8:50">8:00 - 8:50</option>
+                        <option value="8:50 - 9:40">8:50 - 9:40</option>
+                        <option value="10:00 - 10:50">10:00 - 10:50</option>
+                        <option value="10:50 - 11:40">10:50 - 11:40</option>
+                        <option value="11:40 - 12:30">11:40 - 12:30</option>
+                        <option value="13:10 - 14:00">13:10 - 14:00</option>
+                        <option value="14:00 - 14:50">14:00 - 14:50</option>
+                        <option value="14:50 - 15:40">14:50 - 15:40</option>
+                        <option value="16:00 - 16:50">16:00 - 16:50</option>
+                        <option value="16:50 - 17:40">16:50 - 17:40</option>
+                        <option value="17:40 - 18:30">17:40 - 18:30</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="pessoa">
+                        Pessoa com quem deseja trocar
+                    </label>
+
+                    <input
+                        type="text"
+                        id="pessoa"
+                        placeholder="Nome do aluno"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="observacao">
+                        Observação
+                    </label>
+
+                    <textarea
+                        id="observacao"
+                        rows="5"
+                        placeholder="Digite uma observação sobre a troca..."
+                    ></textarea>
+                </div>
+
+                <div class="botoes">
+
+                    <button type="submit">
+                        Solicitar Troca
+                    </button>
+
+                    <button type="reset">
+                        Limpar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="solicitacoes">
+
+            <h2>Minhas Solicitações</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Disciplina</th>
+                        <th>Horário Atual</th>
+                        <th>Novo Horário</th>
+                        <th>Pessoa</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelaSolicitacoes">
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Hora IFMA - Sistema de organização acadêmica
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

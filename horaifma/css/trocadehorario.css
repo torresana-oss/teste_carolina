@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #1f6f35,
+        #2ea043
+    );
+
+    color: #333;
+
+    min-height: 100vh;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background-color: white;
+
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 30px auto 20px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    animation: aparecer 0.6s ease;
+}
+
+
+header h1 {
+    color: #1f6f35;
+
+    font-size: 32px;
+
+    font-weight: 700;
+}
+
+
+header p {
+    color: #555;
+
+    font-size: 16px;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+main {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 0 auto 40px;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.titulo {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    animation: aparecer 0.7s ease;
+}
+
+
+.titulo h2 {
+    color: #1f6f35;
+
+    font-size: 24px;
+
+    margin-bottom: 5px;
+}
+
+
+.titulo p {
+    color: #666;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   CAIXA DO FORMULÁRIO
+========================= */
+
+.troca-box {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    animation: aparecer 0.8s ease;
+}
+
+
+/* =========================
+   CAMPOS
+========================= */
+
+.campo {
+    margin-bottom: 20px;
+}
+
+
+.campo label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #1f6f35;
+
+    font-weight: 600;
+
+    font-size: 14px;
+}
+
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #cfd8d2;
+
+    border-radius: 8px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    background-color: #fafafa;
+
+    color: #333;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* =========================
+   EFEITO AO CLICAR NOS CAMPOS
+========================= */
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #2ea043;
+
+    background-color: white;
+
+    box-shadow: 0 0 0 3px rgba(46, 160, 67, 0.15);
+}
+
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #999;
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.campo textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+
+/* =========================
+   LINHA
+========================= */
+
+hr {
+    border: none;
+
+    border-top: 1px solid #e2e8e4;
+
+    margin: 25px 0;
+}
+
+
+/* =========================
+   TÍTULO NOVO HORÁRIO
+========================= */
+
+.troca-box h3 {
+    color: #1f6f35;
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.botoes {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.botoes button {
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Botão solicitar */
+
+.botoes button[type="submit"] {
+    background-color: #1f6f35;
+
+    color: white;
+
+    flex: 1;
+}
+
+
+.botoes button[type="submit"]:hover {
+    background-color: #175528;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(31, 111, 53, 0.3);
+}
+
+
+/* Botão limpar */
+
+.botoes button[type="reset"] {
+    background-color: #eef8f0;
+
+    color: #1f6f35;
+
+    border: 1px solid #b8d8bf;
+}
+
+
+.botoes button[type="reset"]:hover {
+    background-color: #dcefe0;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   SOLICITAÇÕES
+========================= */
+
+.solicitacoes {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    overflow-x: auto;
+
+    animation: aparecer 0.9s ease;
+}
+
+
+.solicitacoes h2 {
+    color: #1f6f35;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   TABELA
+========================= */
+
+table {
+    width: 100%;
+
+    min-width: 700px;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+
+/* Cabeçalho da tabela */
+
+thead {
+    background-color: #1f6f35;
+
+    color: white;
+}
+
+
+th {
+    padding: 14px;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* Células */
+
+td {
+    padding: 14px;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    font-size: 14px;
+
+    color: #555;
+}
+
+
+/* Linhas alternadas */
+
+tbody tr:nth-child(even) {
+    background-color: #f5faf6;
+}
+
+
+/* Efeito ao passar o mouse */
+
+tbody tr:hover {
+    background-color: #e8f5eb;
+
+    transition: 0.2s;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+td:last-child {
+    font-weight: 600;
+
+    color: #1f6f35;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background-color: white;
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 0 auto 30px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+footer p {
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+
+footer a {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: #1f6f35;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+footer a:hover {
+    color: #2ea043;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   ANIMAÇÃO
+========================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    header,
+    main,
+    footer {
+        width: 94%;
+    }
+
+
+    header {
+        margin-top: 15px;
+
+        padding: 20px;
+    }
+
+
+    header h1 {
+        font-size: 26px;
+    }
+
+
+    .titulo,
+    .troca-box,
+    .solicitacoes {
+        padding: 20px;
+    }
+
+
+    .titulo h2,
+    .solicitacoes h2 {
+        font-size: 20px;
+    }
+
+
+    .botoes {
+        flex-direction: column;
+    }
+
+
+    .botoes button {
+        width: 100%;
+    }
+
+
+    th,
+    td {
+        padding: 10px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .campo input,
+    .campo select,
+    .campo textarea {
+        font-size: 13px;
+
+        padding: 10px;
+    }
+
+
+    .troca-box h3 {
+        font-size: 18px;
+    }
+
+}

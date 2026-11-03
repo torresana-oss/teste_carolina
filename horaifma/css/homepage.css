@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ================= BODY ================= */
+
+body {
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #1f6f35,
+        #2ea043
+    );
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+    width: 92%;
+    max-width: 1500px;
+
+    height: 92vh;
+
+    display: grid;
+
+    grid-template-columns: 58% 42%;
+
+    background: #fff;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .25);
+}
+
+
+/* ================= LADO ESQUERDO ================= */
+
+.left {
+    background: linear-gradient(
+        160deg,
+        #1d7d38,
+        #2ea043
+    );
+
+    color: #fff;
+
+    padding: 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* CÍRCULO DECORATIVO */
+
+.left::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    background: rgba(255, 255, 255, .05);
+
+    border-radius: 50%;
+
+    top: -150px;
+    left: -150px;
+}
+
+
+/* OUTRO CÍRCULO DECORATIVO */
+
+.left::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: rgba(255, 255, 255, .04);
+
+    border-radius: 50%;
+
+    bottom: -220px;
+    right: -220px;
+}
+
+
+/* ================= TEXTO ESQUERDO ================= */
+
+.left h2 {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    z-index: 5;
+}
+
+
+.left p {
+    width: 85%;
+
+    text-align: center;
+
+    line-height: 1.8;
+
+    font-size: 20px;
+
+    z-index: 5;
+}
+
+
+/* ================= LADO DIREITO ================= */
+
+.right {
+    background: #f8f8f8;
+
+    padding: 50px;
+
+    overflow-y: auto;
+}
+
+
+/* ================= TÍTULO ================= */
+
+.right h1 {
+    text-align: center;
+
+    color: #2ea043;
+
+    font-size: 46px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================= SUBTÍTULO ================= */
+
+.subtitulo {
+    text-align: center;
+
+    color: #777;
+
+    margin-bottom: 35px;
+}
+
+
+/* ================= MENU ================= */
+
+ul {
+    list-style: none;
+}
+
+
+ul li {
+    margin-bottom: 15px;
+}
+
+
+ul li a {
+    display: flex;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    background: #fff;
+
+    color: #2ea043;
+
+    font-weight: 600;
+
+    font-size: 18px;
+
+    height: 65px;
+
+    padding: 0 25px;
+
+    border-radius: 15px;
+
+    transition: .3s;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+}
+
+
+ul li a:hover {
+    background: #2ea043;
+
+    color: #fff;
+
+    transform: translateX(8px);
+
+    box-shadow: 0 12px 25px rgba(46, 160, 67, .35);
+}
+
+
+/* ================= AVISOS ================= */
+
+.avisos {
+    margin-top: 35px;
+
+    background: #fff;
+
+    border-left: 6px solid #d81b1b;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+}
+
+
+.avisos h3 {
+    color: #d81b1b;
+
+    margin-bottom: 18px;
+
+    font-size: 26px;
+}
+
+
+.avisos p {
+    color: #555;
+
+    line-height: 1.7;
+
+    margin: 10px 0;
+}
+
+
+/* ================= BARRA DE ROLAGEM ================= */
+
+.right::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+.right::-webkit-scrollbar-track {
+    background: #ececec;
+}
+
+
+.right::-webkit-scrollbar-thumb {
+    background: #2ea043;
+
+    border-radius: 10px;
+}
+
+
+.right::-webkit-scrollbar-thumb:hover {
+    background: #237a3b;
+}
+
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 1000px) {
+
+    body {
+        overflow: auto;
+
+        padding: 20px;
+    }
+
+
+    .container {
+        grid-template-columns: 1fr;
+
+        height: auto;
+    }
+
+
+    .left {
+        padding: 40px 25px;
+    }
+
+
+    .left h2 {
+        font-size: 32px;
+    }
+
+
+    .left p {
+        width: 100%;
+
+        font-size: 17px;
+    }
+
+
+    .right {
+        overflow: visible;
+
+        padding: 35px 25px;
+    }
+
+
+    .right h1 {
+        font-size: 36px;
+    }
+
+
+    ul li a {
+        font-size: 16px;
+
+        height: 58px;
+    }
+
+}
+
+
+/* ================= CELULAR ================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+
+    .container {
+        width: 100%;
+
+        border-radius: 18px;
+    }
+
+
+    .left {
+        padding: 35px 20px;
+    }
+
+
+    .left h2 {
+        font-size: 27px;
+    }
+
+
+    .left p {
+        font-size: 15px;
+    }
+
+
+    .right {
+        padding: 30px 20px;
+    }
+
+
+    .right h1 {
+        font-size: 30px;
+    }
+
+
+    .avisos {
+        padding: 20px;
+    }
+
+}
