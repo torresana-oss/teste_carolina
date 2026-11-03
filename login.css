@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1f6f35, #2ea043);
+    padding: 20px;
+}
+
+/* ================= CARD DO LOGIN ================= */
+
+.login-box {
+    width: 95%;
+    max-width: 520px;
+    background: white;
+    padding: 45px;
+    border-radius: 25px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    animation: aparecer 0.7s;
+}
+
+/* ================= TÍTULOS ================= */
+
+.login-box h1 {
+    text-align: center;
+    color: #2ea043;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* ================= TEXTO ================= */
+
+.login-box p {
+    color: #666;
+    text-align: center;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.login-box hr {
+    border: none;
+    height: 2px;
+    background: #2ea043;
+    margin: 25px 0;
+}
+
+/* ================= FORMULÁRIO ================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+    border-color: #2ea043;
+    box-shadow: 0 0 10px rgba(46, 160, 67, 0.25);
+}
+
+/* ================= BOTÕES ================= */
+
+.botoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.botoes input {
+    flex: 1;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botoes input[type="submit"] {
+    background: #2ea043;
+    color: white;
+}
+
+.botoes input[type="submit"]:hover {
+    background: #237a3b;
+    transform: translateY(-3px);
+}
+
+.botoes input[type="reset"] {
+    background: #ececec;
+    color: #444;
+}
+
+.botoes input[type="reset"]:hover {
+    background: #dcdcdc;
+    transform: translateY(-3px);
+}
+
+/* ================= LINKS ================= */
+
+.link {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #2ea043;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.inicio {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    background: #d81b1b;
+    color: white;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.inicio:hover {
+    background: #b91515;
+    transform: translateY(-3px);
+}
+
+/* ================= ANIMAÇÃO ================= */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 600px) {
+
+    .login-box {
+        padding: 30px 20px;
+    }
+
+    .login-box h1 {
+        font-size: 34px;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ================= CONFIGURAÇÕES GERAIS ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1f6f35, #2ea043);
+    color: #444;
+    padding: 40px 20px;
+}
+
+
+/* ================= CABEÇALHO ================= */
+
+header {
+    width: 95%;
+    max-width: 1500px;
+    margin: 0 auto 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.20);
+    text-align: center;
+    animation: aparecer 0.7s;
+}
+
+header h1 {
+    color: #2ea043;
+    font-size: 42px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #666;
+    font-size: 17px;
+}
+
+
+/* ================= CONTEÚDO ================= */
+
+main {
+    width: 95%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+
+/* ================= CADA SALA ================= */
+
+.sala {
+    background: white;
+    padding: 25px;
+    margin-bottom: 35px;
+    border-radius: 25px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.20);
+    animation: aparecer 0.7s;
+    overflow: hidden;
+}
+
+
+/* ================= NOME DA SALA ================= */
+
+.sala h2 {
+    color: #2ea043;
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #2ea043;
+}
+
+
+/* ================= TABELA ================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+
+/* ================= CABEÇALHO DA TABELA ================= */
+
+th {
+    background: #2ea043;
+    color: white;
+    padding: 15px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #237a3b;
+}
+
+
+/* ================= CÉLULAS ================= */
+
+td {
+    padding: 13px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 13px;
+    line-height: 1.6;
+    transition: 0.3s;
+}
+
+
+/* ================= COLUNA DOS HORÁRIOS ================= */
+
+td:first-child {
+    background: #eef8f0;
+    color: #237a3b;
+    font-weight: 600;
+    width: 125px;
+    white-space: nowrap;
+}
+
+
+/* ================= LINHAS ALTERNADAS ================= */
+
+tr:nth-child(even) td:not(:first-child) {
+    background: #fafafa;
+}
+
+
+/* ================= EFEITO AO PASSAR O MOUSE ================= */
+
+tbody tr:hover td {
+    background: #f0faf2;
+}
+
+
+/* ================= INTERVALO E ALMOÇO ================= */
+
+.pausa td {
+    background: #e8f5eb !important;
+    color: #237a3b;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/* ================= CÉLULAS VAZIAS ================= */
+
+.vazio {
+    color: #999;
+    font-weight: 400;
+}
+
+
+/* ================= EFEITO NAS CÉLULAS ================= */
+
+td:hover {
+    box-shadow: inset 0 0 0 1px #2ea043;
+}
+
+
+/* ================= BOTÃO VOLTAR AO INÍCIO ================= */
+
+.voltar {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+.voltar a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background: white;
+    color: #1f6f35;
+
+    text-decoration: none;
+
+    padding: 14px 30px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+
+    transition: all 0.3s ease;
+}
+
+/* Setinha antes do texto */
+.voltar a::before {
+    content: "←";
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Efeito ao passar o mouse */
+.voltar a:hover {
+    background: #1f6f35;
+    color: white;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Efeito ao clicar */
+.voltar a:active {
+    transform: translateY(-1px);
+}
+
+
+/* ================= RODAPÉ ================= */
+
+footer {
+    width: 95%;
+    max-width: 1500px;
+    margin: 30px auto 0;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ================= ANIMAÇÃO ================= */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 1000px) {
+
+    body {
+        padding: 25px 10px;
+    }
+
+    header,
+    main,
+    footer {
+        width: 98%;
+    }
+
+    .sala {
+        padding: 15px;
+        border-radius: 18px;
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    .sala h2 {
+        font-size: 23px;
+    }
+}
+
+
+/* ================= CELULAR ================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px 5px;
+    }
+
+    header {
+        padding: 25px 15px;
+        border-radius: 18px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .sala {
+        padding: 12px;
+        margin-bottom: 25px;
+        border-radius: 18px;
+    }
+
+    .sala h2 {
+        font-size: 20px;
+    }
+
+    /* Permite rolar a tabela horizontalmente no celular */
+    table {
+        min-width: 900px;
+    }
+
+    .sala {
+        overflow-x: auto;
+    }
+
+    /* Botão no celular */
+    .voltar {
+        margin: 30px 0 15px;
+    }
+
+    .voltar a {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+
+/* ================= CELULAR PEQUENO ================= */
+
+@media (max-width: 450px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .sala h2 {
+        font-size: 18px;
+    }
+
+    .voltar a {
+        padding: 11px 20px;
+        font-size: 13px;
+    }
+}
